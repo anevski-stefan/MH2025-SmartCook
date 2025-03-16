@@ -1,4 +1,4 @@
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 import type { Recipe, DifficultyLevel, RecipeIngredient, Instruction } from '@/types/recipe';
 
 export async function getSavedRecipes(): Promise<string[]> {
