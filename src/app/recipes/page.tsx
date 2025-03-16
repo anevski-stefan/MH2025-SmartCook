@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import RecipeList from './RecipeList';
 import type { Recipe } from '@/types/recipe';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/app/utils/supabase/server';
 
 export default async function RecipesPage() {
   const supabase = createClient();

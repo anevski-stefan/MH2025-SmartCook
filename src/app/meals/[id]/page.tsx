@@ -13,7 +13,7 @@ import {
   ListItem,
 } from '@mui/material';
 import { format } from 'date-fns';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 import NutritionalInfo from '@/components/NutritionalInfo';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import CookingAssistant from '@/components/CookingAssistant';

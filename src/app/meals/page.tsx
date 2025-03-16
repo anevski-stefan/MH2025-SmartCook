@@ -23,8 +23,7 @@ import {
   Restaurant as RestaurantIcon,
 } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 import { useTranslation } from '@/hooks/useTranslation';
 import ProtectedRoute from '@/components/ProtectedRoute';
 

@@ -33,7 +33,7 @@ import {
 } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 import { useTranslation } from '@/hooks/useTranslation';
 import ReactMarkdown from 'react-markdown';
 import { alpha } from '@mui/material/styles';

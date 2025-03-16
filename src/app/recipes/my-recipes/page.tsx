@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/app/utils/supabase/server';
 import RecipeCard from '@/components/RecipeCard';
 import type { Recipe } from '@/types/recipe';
 

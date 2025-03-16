@@ -32,7 +32,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/hooks/useTranslation';
 import RecipeSuggestions from '@/components/RecipeSuggestions';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 
 interface UserIngredient {
   id: string;

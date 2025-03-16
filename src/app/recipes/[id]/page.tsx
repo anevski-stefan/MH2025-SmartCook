@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Recipe, RecipeIngredient, Instruction } from '@/types/recipe';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/app/utils/supabase/server';
 import RecipeDetailClient from '@/components/RecipeDetailClient';
 import IngredientsSection from '@/components/IngredientsSection';
 import SaveRecipeButtonWrapper from '@/components/SaveRecipeButtonWrapper';

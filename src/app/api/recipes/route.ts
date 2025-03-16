@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { CreateRecipeInput, Recipe, UpdateRecipeInput } from '@/types/recipe';
-import { createClient } from '@/utils/supabase/server';
+import { createClient } from '@/app/utils/supabase/server';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

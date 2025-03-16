@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { suggestRecipesFromIngredients } from '@/utils/gemini-client';
+import { suggestRecipesFromIngredients } from '@/app/utils/gemini-client';
 
 if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
   throw new Error('NEXT_PUBLIC_GEMINI_API_KEY environment variable is not set');

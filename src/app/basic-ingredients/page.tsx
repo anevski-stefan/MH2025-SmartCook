@@ -21,7 +21,7 @@ import {
 } from '@mui/material';
 import { Add as AddIcon, Delete as DeleteIcon, Edit as EditIcon } from '@mui/icons-material';
 import { useAuth } from '@/contexts/AuthContext';
-import { supabase } from '@/utils/supabase-client';
+import { supabase } from '@/app/utils/supabase-client';
 import { PostgrestError } from '@supabase/supabase-js';
 
 interface BasicIngredient {

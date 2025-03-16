@@ -80,7 +80,7 @@ export default function RecipeList({ recipes }: RecipeListProps) {
             </div>
 
             <div className="flex items-center justify-between text-sm text-gray-500">
-              <span>{recipe.cooking_time} mins</span>
+              <span>{recipe.cookingTime} mins</span>
               <span>{recipe.difficulty}</span>
             </div>
 

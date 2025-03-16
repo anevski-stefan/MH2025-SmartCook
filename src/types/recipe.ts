@@ -27,6 +27,7 @@ export interface RecipeIngredient {
     title: string;
     description: string;
     image: string;
+    image_url?: string;
     cookingTime?: number;
     readyInMinutes?: number;
     servings?: number;

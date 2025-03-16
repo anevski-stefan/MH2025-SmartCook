@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Container, Typography, Grid, CircularProgress, Box, Alert, Button } from '@mui/material';
-import { getSavedRecipes, unsaveRecipe } from '@/utils/recipes';
+import { getSavedRecipes, unsaveRecipe } from '@/app/utils/recipes';
 import RecipeCard from '@/components/RecipeCard';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import type { Recipe } from '@/types/recipe';

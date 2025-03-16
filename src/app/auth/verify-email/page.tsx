@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Container, Typography, Paper, Box, CircularProgress, Button } from '@mui/material';
-import { supabase } from '@/utils/supabase-client';
+import { supabase } from '@/app/utils/supabase-client';
 import { useTranslation } from '@/hooks/useTranslation';
 import Footer from '@/components/Footer';
 

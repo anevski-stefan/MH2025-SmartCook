@@ -24,16 +24,16 @@ import {
   Alert,
 } from '@mui/material';
 import { PhotoCamera, Delete, Save } from '@mui/icons-material';
-import { RootState } from '@/store/store';
+import { RootState } from '@/app/store/store';
 import { 
   addScannedIngredient, 
   clearScannedIngredients, 
   setLoading, 
   setError,
   deleteScannedIngredient,
-} from '@/store/slices/ingredientSlice';
+} from '@/app/store/slices/ingredientSlice';
 import { useAuth } from '@/contexts/AuthContext';
-import { supabase } from '@/utils/supabase-client';
+import { supabase } from '@/app/utils/supabase-client';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/hooks/useTranslation';
 import RecipeSuggestions from '@/components/RecipeSuggestions';

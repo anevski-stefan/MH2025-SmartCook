@@ -140,8 +140,8 @@ export async function POST(request: Request) {
 
     const ingredients = ingredientsText
       .split(',')
-      .map(ingredient => ingredient.trim())
-      .filter(ingredient => ingredient.length > 0);
+      .map((ingredient: string) => ingredient.trim())
+      .filter((ingredient: string) => ingredient.length > 0);
 
     if (ingredients.length === 0) {
       return NextResponse.json(
