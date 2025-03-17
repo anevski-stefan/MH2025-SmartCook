@@ -90,27 +90,34 @@ export default function RecipeSuggestions({ ingredients }: RecipeSuggestionsProp
       });
 
       if (!response.ok) {
-        throw new Error('Failed to fetch recipe suggestions');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to fetch recipe suggestions');
       }
 
       const data = await response.json();
-      if (!data.suggestions || data.suggestions.length === 0) {
+      console.log('API Response:', data);
+      // Handle nested suggestions structure
+      const recipeSuggestions = data.suggestions.suggestions || data.suggestions;
+      if (!recipeSuggestions || recipeSuggestions.length === 0) {
         setError('No recipes found that can be made with your current ingredients.');
         setSuggestions([]);
         return;
       }
-      setSuggestions(data.suggestions);
+      setSuggestions(recipeSuggestions);
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error details:', error);
       setError(error instanceof Error ? error.message : 'Failed to get suggestions');
+      setSuggestions([]);
     } finally {
       setLoading(false);
     }
   }, [ingredients, selectedBasicIngredients]);
 
   useEffect(() => {
-    fetchBasicIngredients();
-  }, [fetchBasicIngredients]);
+    // Use Set to ensure unique ingredients
+    const uniqueIngredients = [...new Set(ingredients)];
+    setAllBasicIngredients(uniqueIngredients);
+  }, [ingredients]);
 
   useEffect(() => {
     if (ingredients.length > 0) {
@@ -270,11 +277,11 @@ export default function RecipeSuggestions({ ingredients }: RecipeSuggestionsProp
                           label={ingredient}
                           size="small"
                           sx={{ 
-                            bgcolor: isAvailable ? 'background.paper' : 'error.lighter',
-                            borderColor: isAvailable ? 'divider' : 'error.main',
+                            bgcolor: isAvailable ? 'background.paper' : 'background.default',
+                            borderColor: isAvailable ? 'divider' : 'text.disabled',
                             border: '1px solid',
                             '& .MuiChip-label': {
-                              color: isAvailable ? 'text.primary' : 'error.main',
+                              color: isAvailable ? 'text.primary' : 'text.disabled',
                               fontWeight: isAvailable ? 400 : 500
                             }
                           }}
