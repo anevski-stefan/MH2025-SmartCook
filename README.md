@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Cook - AI-Powered Cooking Assistant
+
+Smart Cook is an intelligent cooking assistant application that helps you with recipe suggestions, ingredient recognition, and meal planning. Built with modern web technologies, it provides an intuitive interface for all your cooking needs.
+
+## Features
+
+- 🤖 AI-powered recipe suggestions using Google's Generative AI
+- 📸 Real-time ingredient recognition using TensorFlow.js
+- 📅 Meal planning and scheduling
+- 🌐 Multi-language support
+- 🎨 Modern, responsive UI built with Material-UI
+- 🔐 User authentication and data persistence with Supabase
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, Material-UI
+- **AI/ML**: TensorFlow.js (COCO-SSD model), Google Generative AI
+- **Backend**: Supabase
+- **State Management**: Redux Toolkit
+- **Styling**: Tailwind CSS, Emotion
+- **Animation**: Framer Motion
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Fill in the required API keys and configuration values
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+Make sure to set up the following environment variables in your `.env` file:
 
-To learn more about Next.js, take a look at the following resources:
+- `NEXT_PUBLIC_GEMINI_API_KEY`: Your Google Gemini API key for AI features
+- `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+- `YOUTUBE_API_KEY`: Your YouTube API key for video content
+- `NEXT_PUBLIC_GOOGLE_API_KEY`: Your Google API key for additional services
+- `NEXT_PUBLIC_GOOGLE_CLIENT_ID`: Your Google Client ID for authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy the `.env.example` file to `.env` and fill in your actual API keys and credentials.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development
 
-## Deploy on Vercel
+- `npm run dev`: Start the development server
+- `npm run build`: Build the production application
+- `npm run start`: Start the production server
+- `npm run lint`: Run ESLint for code quality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
