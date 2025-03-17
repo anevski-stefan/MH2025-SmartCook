@@ -13,7 +13,7 @@ import {
   Button,
   Collapse,
 } from '@mui/material';
-import { supabase } from '@/utils/supabase-client';
+import { supabase } from '@/app/utils/supabase-client';
 
 interface Recipe {
   name: string;
