@@ -2,8 +2,8 @@
 
 import { IconButton, Tooltip } from '@mui/material';
 import { useThemeMode } from '@/contexts/ThemeContext';
-import Brightness4Icon from '@mui/icons-material/Brightness4'; // Dark mode icon
-import Brightness7Icon from '@mui/icons-material/Brightness7'; // Light mode icon
+import Brightness4Icon from '@mui/icons-material/Brightness4'; 
+import Brightness7Icon from '@mui/icons-material/Brightness7'; 
 
 export default function ThemeToggle() {
   const { mode, toggleTheme } = useThemeMode();

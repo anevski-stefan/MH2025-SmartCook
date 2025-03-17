@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useAuth } from '@/contexts/AuthContext';
-import { supabase } from '@/utils/supabase-client';
+import { supabase } from '@/app/utils/supabase-client';
 
 interface RecipeIngredient {
   id: string;

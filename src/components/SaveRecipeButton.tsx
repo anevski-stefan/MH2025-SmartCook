@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { IconButton, Tooltip, Snackbar, Alert } from '@mui/material';
 import { Bookmark, BookmarkBorder } from '@mui/icons-material';
 import { useAuth } from '@/contexts/AuthContext';
-import { saveRecipe, unsaveRecipe, getSavedRecipes } from '@/utils/recipes';
+import { saveRecipe, unsaveRecipe, getSavedRecipes } from '@/app/utils/recipes';
 import { useTranslation } from '@/hooks/useTranslation';
 
 interface SaveRecipeButtonProps {

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import { createClient } from '@/utils/supabase/client';
+import { createClient } from '@/app/utils/supabase/client';
 import { Box, IconButton, List, ListItem, ListItemText, Snackbar, Alert } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import type { RecipeIngredient } from '@/types/recipe';

@@ -107,33 +107,49 @@ const ScanPage = () => {
   }, [user, router, dispatch, t]);
 
   const saveIngredient = async (ingredient: ScannedIngredient) => {
-    if (!user) return;
+    if (!user) {
+      throw new Error('User not authenticated');
+    }
 
-    const { error: dbError } = await supabase
+    if (!ingredient.name || !ingredient.quantity || !ingredient.unit) {
+      throw new Error('Missing required ingredient fields');
+    }
+
+    const { data, error: dbError } = await supabase
       .from('user_ingredients')
       .insert({
         user_id: user.id,
         name: ingredient.name,
         quantity: ingredient.quantity,
         unit: ingredient.unit,
-      });
+      })
+      .select()
+      .single();
 
-    if (dbError) throw dbError;
+    if (dbError) {
+      console.error('Database error:', dbError);
+      throw new Error(dbError.message);
+    }
 
-    dispatch(deleteScannedIngredient(ingredient.id));
+    return data;
   };
 
   const handleSaveIngredient = async (ingredient: ScannedIngredient) => {
     try {
-      await saveIngredient(ingredient);
-      setNotification({
-        message: `${ingredient.name} ${t('scan.ingredientAdded')}`,
-        severity: 'success'
-      });
+      const savedIngredient = await saveIngredient(ingredient);
+      
+      if (savedIngredient) {
+        dispatch(deleteScannedIngredient(ingredient.id));
+        setNotification({
+          message: `${ingredient.name} ${t('scan.ingredientAdded')}`,
+          severity: 'success'
+        });
+      }
     } catch (error) {
       console.error('Error saving ingredient:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
       setNotification({
-        message: t('scan.saveError'),
+        message: `${t('scan.saveError')}: ${errorMessage}`,
         severity: 'error'
       });
     }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Rating, Typography, Box, TextField, Button } from '@mui/material';
 import { useAuth } from '@/contexts/AuthContext';
-import { rateRecipe, getRecipeRating } from '@/utils/supabase-client';
+import { rateRecipe, getRecipeRating } from '@/app/utils/supabase-client';
 
 interface RecipeRatingProps {
   recipeId: string;

@@ -14,7 +14,7 @@ import {
   import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
   import { useState } from 'react';
   import type { Ingredient } from '@/types/ingredient';
-  import { supabase } from '@/utils/supabase-client';
+  import { supabase } from '@/app/utils/supabase-client';
   import { useAuth } from '@/contexts/AuthContext';
   
   interface RecipeIngredientsProps {
