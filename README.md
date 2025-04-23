@@ -13,12 +13,14 @@ Smart Cook is an intelligent cooking assistant application that helps you with r
 
 ## Tech Stack
 
-- **Frontend**: Next.js 15, React 19, Material-UI
-- **AI/ML**: TensorFlow.js (COCO-SSD model), Google Generative AI
-- **Backend**: Supabase
-- **State Management**: Redux Toolkit
-- **Styling**: Tailwind CSS, Emotion
-- **Animation**: Framer Motion
+- **Frontend**: Next.js 15.2.1, React 19, Material-UI 6.4.7
+- **AI/ML**: TensorFlow.js 4.22.0, COCO-SSD 2.2.3, Google Generative AI 0.1.3
+- **Backend**: Supabase with Auth Helpers
+- **State Management**: Redux Toolkit 2.6.1
+- **Styling**: Tailwind CSS, Emotion 11.14.0
+- **Animation**: Framer Motion 12.4.11
+- **Date Handling**: Date-fns 2.30.0, Moment 2.30.1
+- **Additional Features**: React Webcam 7.2.0, React Markdown 10.1.0
 
 ## Getting Started
 
@@ -65,4 +67,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
